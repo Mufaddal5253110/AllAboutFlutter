@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:all_about_flutter/constants.dart';
+import 'package:all_about_flutter/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -29,7 +31,14 @@ class _ListviewState extends State<Listview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("ListView")),
+      appBar: AppBar(title: Text("ListView"), actions: <Widget>[
+        IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () {
+              Constants.pref.setBool("loggedin", false);
+              Navigator.pushReplacementNamed(context, LoginPage.routeName);
+            })
+      ]),
       body: data != null
           ? ListView.builder(
               itemCount: data.length,

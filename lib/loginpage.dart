@@ -1,3 +1,4 @@
+import 'package:all_about_flutter/constants.dart';
 import 'package:all_about_flutter/drawer.dart';
 import 'package:all_about_flutter/listview.dart';
 import 'package:flutter/material.dart';
@@ -51,6 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                               //     context,
                               //     MaterialPageRoute(
                               //         builder: (context) => Listview()));
+                              Constants.pref.setBool("loggedin", true);
                               Navigator.pushReplacementNamed(
                                   context, Listview.routeName);
                             },

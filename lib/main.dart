@@ -1,16 +1,22 @@
+import 'package:all_about_flutter/constants.dart';
 import 'package:all_about_flutter/drawer.dart';
 import 'package:all_about_flutter/listview.dart';
 import 'package:all_about_flutter/loginpage.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  Constants.pref = await SharedPreferences.getInstance();
+
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: "AllAboutFlutter",
     theme: ThemeData(
       primarySwatch: Colors.orange,
     ),
-    home: LoginPage(),
+    home: Constants.pref.getBool("loggedin") == true ? Listview() : LoginPage(),
     routes: {
       LoginPage.routeName: (context) => LoginPage(),
       Listview.routeName: (context) => Listview(),
