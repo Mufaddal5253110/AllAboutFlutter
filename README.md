@@ -1,6 +1,5 @@
-# all_about_flutter
+# SharedPrefrence, AutoLogin & Signout
 
-A new Flutter project.
 
 ## Getting Started
 
