@@ -1,9 +1,21 @@
 import 'package:all_about_flutter/drawer.dart';
 import 'package:all_about_flutter/listview.dart';
+import 'package:all_about_flutter/loginpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Listview());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: "AllAboutFlutter",
+    theme: ThemeData(
+      primarySwatch: Colors.orange,
+    ),
+    home: LoginPage(),
+    routes: {
+      LoginPage.routeName: (context) => LoginPage(),
+      Listview.routeName: (context) => Listview(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
