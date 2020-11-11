@@ -1,6 +1,8 @@
-# all_about_flutter
+# ListView & Http
 
-A new Flutter project.
+* Fetching json data using http and displaying in listView.
+
+<img src="https://user-images.githubusercontent.com/60619133/98807471-b1893c00-2440-11eb-84ed-3241ecbe5938.png" alt="feed example" width = "320">
 
 ## Getting Started
 
