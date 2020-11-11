@@ -1,6 +1,6 @@
-# all_about_flutter
+# All About Flutter
 
-A new Flutter project.
+* Flutter Tour Through Branches
 
 ## Getting Started
 
